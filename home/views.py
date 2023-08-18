@@ -8,7 +8,7 @@ class Home(APIView):
     def get(self,request):
         name=request.query_params['name']
         return Response({'name':name})
-    def post(self,request):
-        name=request.data['name']
-        return Response({'name':name})
+    # def post(self,request):
+    #     name=request.data['name']
+    #     return Response({'name':name})
     
