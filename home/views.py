@@ -6,4 +6,9 @@ from rest_framework.views import APIView
 # Create your views here.
 class Home(APIView):
     def get(self,request):
-        return Response({'name':'zara'})
+        name=request.query_params['name']
+        return Response({'name':name})
+    def post(self,request):
+        name=request.data['name']
+        return Response({'name':name})
+    
