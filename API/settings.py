@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #3rd party
      'rest_framework',
      'accounts',
+     'rest_framework.authtoken',
     
     #local
     'home',
