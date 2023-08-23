@@ -2,11 +2,13 @@ from django.shortcuts import render
 # from django.views import View
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import permissions
 from .serializers import PersonSerializer
 from .models import Person
 
 # Create your views here.
 class Home(APIView):
+    permission_classes=[permissions.IsAdminUser,]
     def get(self,request):
         # name=request.query_params['name']
         persons = Person.objects.all()
